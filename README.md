@@ -23,6 +23,6 @@ To run the script, use the following command:
 Example:  
 
 ```bash
-./setup_and_run.sh lab3_condition\:no_globl.s
+./setup_and_run.sh lab3_condition:no_globl.s
 ```
 
