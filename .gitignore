@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+workshop_risc-v
+
 # C extensions
 *.so
 
