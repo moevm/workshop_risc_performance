@@ -17,12 +17,5 @@
 To run the script, use the following command:
 
 ```bash
-./setup_and_run.sh <lab>:<test>
+./setup_and_run.sh
 ```
-  
-Example:  
-
-```bash
-./setup_and_run.sh lab3_condition:no_globl.s
-```
-
