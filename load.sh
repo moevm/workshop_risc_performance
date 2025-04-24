@@ -97,6 +97,7 @@ do
     if [[ -n "${task_filter[$task]}" ]]; then
         for solution in ${task_filter[$task]}
         do
+            last_name="${solution}"
             if [ -f "${tasks_dir}/${task}/${seed}/success/${solution}" ]; then
                 filtered_solutions+=" ${solution};success"
             fi
@@ -121,6 +122,7 @@ do
     total_solutions=$(echo "$solutions" | wc -w)
     for (( i=1; i <= $N_retries; i++ ))
     do
+    start=$(date +%s%3N)
       for s in ${solutions}
       do
         array=(${s//;/ })
@@ -146,6 +148,10 @@ do
         fi
         echo -e "\n"
       done 
+    end=$(date +%s%3N)
+    duration=$((end-start))
+    # echo "${task}:${last_name}:time.log"
+    echo "${duration} " >> "${task}:${last_name}:time.log"
     done
   done
 done
